@@ -85,3 +85,53 @@
 ---
 
 ### Java 설치
+
+- <img title="" src="Java_assets/2022-08-03-22-48-11-image.png" alt="" data-align="center">
+
+- ![](Java_assets/2022-08-03-22-49-35-image.png)
+
+- 원래는 이후에 환경변수 설정을 통해서 javac (컴파일 프로그램)이 있는 경로(C:\Program Files\Java\jdk-18.0.2\bin) 를 환경변수 path에 추가해 주어야하는데 최근 버전은 이러한 작업을 설치시 자동으로 해주는 것 같습니다.
+
+---
+
+### Java 실행
+
+- ![](Java_assets/2022-08-03-23-03-40-image.png)
+
+- ```bash
+  $ touch Helloworld.java
+  ```
+  
+  - 파일 생성 후 메모장으로 실행!
+
+- ```java
+  class Helloworld {
+      public static void main(String[] args){
+          System.out.println("Hello World");
+      }
+  }
+  ```
+  
+  - 내용 입력 후 저장
+  
+  - ![](Java_assets/2022-08-03-23-25-39-image.png)
+
+- ```bash
+  $ javac Helloworld.java
+  ```
+  
+  - 해당 명령어를 실행하면 컴파일 해서 바이트 코드 생성
+  
+  - Helloworld.class 가 생성됨
+
+- ```bash
+  $ java Helloworld
+  ```
+  
+  - bash창에 결과가 출력됨
+  
+  - ![](Java_assets/2022-08-03-23-26-50-image.png)
+
+---
+
+### 이클립스 설치
