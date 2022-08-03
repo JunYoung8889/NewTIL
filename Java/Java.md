@@ -1,8 +1,8 @@
 # Java
 
-- [생활코딩]([Java - 소개와 수업 소개 - YouTube](https://www.youtube.com/watch?v=qR90tdW0Hbo&list=PLuHgQVnccGMCeAy-2-llhw3nWoQKUvQck&index=2))
+- [생활코딩](https://www.youtube.com/watch?v=qR90tdW0Hbo&list=PLuHgQVnccGMCeAy-2-llhw3nWoQKUvQck&index=2)
 
-- [동빈나]([자바 기초 프로그래밍 강좌 1강 - Hello World! (Java Programming Tutorial 2017 #1) - YouTube](https://www.youtube.com/watch?v=wjLwmWyItWI&list=PLRx0vPvlEmdBjfCADjCc41aD4G0bmdl4R))
+- [동빈나](https://www.youtube.com/watch?v=wjLwmWyItWI&list=PLRx0vPvlEmdBjfCADjCc41aD4G0bmdl4R)
 
 ---
 
@@ -85,7 +85,3 @@
 ---
 
 ### Java 설치
-
-
-
-
