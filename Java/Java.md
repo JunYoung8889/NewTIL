@@ -173,42 +173,40 @@
 - 변수 실습
   
   - ```java
-    
     public class Main {
     
-    	// 상수 선언
-    	final static double PI = 3.141592;
-    	
-    	public static void main(String[] args) {
-    		
-    		// 여러가지 자료형 변수 실습
-    		int intType = 100;
-    		double doubleType = 150.5;
-    		String stringType = "jyp";
-    		
-    		System.out.println(intType);
-    		System.out.println(doubleType);
-    		System.out.println(stringType);
-    		
-    		// 상수 활용
-    		int r = 30;
-    		double area = r * r * PI;
-    		System.out.println(area);
-    		r = 20;
-    		System.out.println(area);
-    		area = r * r * PI;
-    		System.out.println(area);
-    		
-    		// 오버플로우 실습
-    		System.out.println(1000000000 * 10);
-    		System.out.println(2147483647 + Math.abs(-2147483648) + 1);
-    		System.out.println(Math.pow(3, 20));
-    		System.out.println((int) Math.pow(3, 20));
-    		System.out.println((int) Math.pow(3, 20) + 1);
-    	}
+        // 상수 선언
+        final static double PI = 3.141592;
+    
+        public static void main(String[] args) {
+    
+            // 여러가지 자료형 변수 실습
+            int intType = 100;
+            double doubleType = 150.5;
+            String stringType = "jyp";
+    
+            System.out.println(intType);
+            System.out.println(doubleType);
+            System.out.println(stringType);
+    
+            // 상수 활용
+            int r = 30;
+            double area = r * r * PI;
+            System.out.println(area);
+            r = 20;
+            System.out.println(area);
+            area = r * r * PI;
+            System.out.println(area);
+    
+            // 오버플로우 실습
+            System.out.println(1000000000 * 10);
+            System.out.println(2147483647 + Math.abs(-2147483648) + 1);
+            System.out.println(Math.pow(3, 20));
+            System.out.println((int) Math.pow(3, 20));
+            System.out.println((int) Math.pow(3, 20) + 1);
+        }
     
     }
-    
     ```
   
   - ```
@@ -235,20 +233,22 @@
     
     - ```
       Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
-      	The literal 10000000000 of type int is out of range 
+          The literal 10000000000 of type int is out of range 
       
-      	at Main.main(Main.java:28)
+          at Main.main(Main.java:28)
       ```
   
   - System.out.println(1000000000 * 10);
     
     - 1410065408
     
+    - 10,000,000,000이 아닌, 1,410,065,408 이 출력됨
+    
     - 왜?
     
     - ```
       System.out.println(2147483647 + abs(-2147483648) + 1);
-      => 0 이 출력된
+      => 0 이 출력됨을 확인 가능
       
       2 * ( 2147483647 + abs(-2147483648) + 1 ) + 1410065408
       == 10,000,000,000
