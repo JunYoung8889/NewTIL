@@ -151,3 +151,107 @@
 - ![](Java_assets/2022-08-04-22-39-52-image.png)
 
 ---
+
+### 변수
+
+- 변수
+  
+  - Variable
+  
+  - 프로그램이 실행되는 동안에 언제든지 저장된 값이 변경될 수 있는 공간을 의미함
+  
+  - 물건을 담았다가 뺄 수 있는 열린 상자
+
+- 상수
+  
+  - Constant
+  
+  - 한 번 정해지면 값을 변경할 필요가 없는 데이터를 의미함
+  
+  - 한 번 담으면 물건을 바꾸지 못하는 포장된 상자
+
+- 변수 실습
+  
+  - ```java
+    
+    public class Main {
+    
+    	// 상수 선언
+    	final static double PI = 3.141592;
+    	
+    	public static void main(String[] args) {
+    		
+    		// 여러가지 자료형 변수 실습
+    		int intType = 100;
+    		double doubleType = 150.5;
+    		String stringType = "jyp";
+    		
+    		System.out.println(intType);
+    		System.out.println(doubleType);
+    		System.out.println(stringType);
+    		
+    		// 상수 활용
+    		int r = 30;
+    		double area = r * r * PI;
+    		System.out.println(area);
+    		r = 20;
+    		System.out.println(area);
+    		area = r * r * PI;
+    		System.out.println(area);
+    		
+    		// 오버플로우 실습
+    		System.out.println(1000000000 * 10);
+    		System.out.println(2147483647 + Math.abs(-2147483648) + 1);
+    		System.out.println(Math.pow(3, 20));
+    		System.out.println((int) Math.pow(3, 20));
+    		System.out.println((int) Math.pow(3, 20) + 1);
+    	}
+    
+    }
+    
+    ```
+  
+  - ```
+    100
+    150.5
+    jyp
+    2827.4328
+    2827.4328
+    1256.6368
+    1410065408
+    0
+    3.486784401E9
+    2147483647
+    -2147483648
+    ```
+  
+  - 여러자료형 변수에 값을 담아보고 출력해보자!
+  
+  - final static 을 통해 상수를 정의하고 활용해보자!
+  
+  - int 자료형의 최대값을 확인하고 최대값을 넘어가는 계산을 하면 어떻게 되는지 확인하자, 오버플로우의 이해
+  
+  - System.out.println(10000000000);
+    
+    - ```
+      Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+      	The literal 10000000000 of type int is out of range 
+      
+      	at Main.main(Main.java:28)
+      ```
+  
+  - System.out.println(1000000000 * 10);
+    
+    - 1410065408
+    
+    - 왜?
+    
+    - ```
+      System.out.println(2147483647 + abs(-2147483648) + 1);
+      => 0 이 출력된
+      
+      2 * ( 2147483647 + abs(-2147483648) + 1 ) + 1410065408
+      == 10,000,000,000
+      ```
+    
+    - ![](Java_assets/2022-08-04-23-40-31-image.png)
