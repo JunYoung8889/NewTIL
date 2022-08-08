@@ -229,6 +229,18 @@
   
   - int 자료형의 최대값을 확인하고 최대값을 넘어가는 계산을 하면 어떻게 되는지 확인하자, 오버플로우의 이해
   
+  - " - 2,147,483,648 ~ 2,147,483,647"
+    
+    - 32비트 중 1비트는 음수 양수 부호 비트
+    
+    - 나머지 31 비트가 숫자 부
+    
+    - 2^31 = 2,147,483,648
+    
+    - 양수부 = 0 ~ 2,147,483,647
+    
+    - 음수부 = -2,147,483,648 ~ -1
+  
   - System.out.println(10000000000);
     
     - ```
@@ -255,3 +267,85 @@
       ```
     
     - ![](Java_assets/2022-08-04-23-40-31-image.png)
+
+---
+
+### 이클립스 설정
+
+- ![](Java_assets/2022-08-08-20-51-26-image.png)
+  
+  - window 탭 - Preferences
+
+- ![](Java_assets/2022-08-08-20-52-22-image.png)
+  
+  - General - Appearance
+  
+  - Theme - Dark - Apply and Close
+
+- 코드 창에서 Ctrl 버튼과 '+' or '-' 버튼을 함께 눌러서 화면상에 보이는 글자의 크기를 조절할 수 있다.
+
+---
+
+### 사칙연산
+
+- ```java
+  public class Main {
+  
+  	public static void main(String[] args) {
+  		int a = 1;
+  		int b = 2;
+  		
+  		System.out.println("a + b = " + (a + b));
+  		System.out.print("a - b =");
+  		System.out.print(a - b + "\n");
+  		System.out.printf("a / b = %d \n", a/b);
+  		System.out.println("a * b = " + a * b);
+  		
+  		double c = 1.0;
+  		float d = 3.0f;
+  		int e = 1;
+  		
+  		System.out.println("c / d = " + c/d);
+  		System.out.println("e / d = " + e/d);
+  		
+  		double f = 3e6;
+  		float g = 3e5f;
+  		double h = 2e-3;
+  		
+  		System.out.println("3e6 = " + f);
+  		System.out.println("3e5f = " + g);
+  		System.out.println("2e-3 = " + h);
+  	}
+  }
+  
+  ```
+
+- ```
+  a + b = 3
+  a - b =-1
+  a / b = 0 
+  a * b = 2
+  c / d = 0.3333333333333333
+  e / d = 0.33333334
+  3e6 = 3000000.0
+  3e5f = 300000.0
+  2e-3 = 0.002
+  ```
+
+- println(문자형  + 정수형)
+
+- print "\n" 을 쓰면 println 처럼 쓸 수 있다.
+
+- printf  %d - 정수, %f - 실수, %c- 문자, %s - 문자열
+
+- int float, double / 32비트,  32비트, 64비트
+
+- 나누기 연산시
+  
+  - double / float = double
+  
+  - int / float = float
+
+- a e b = a * 10^b
+
+---
